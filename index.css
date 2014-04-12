@@ -38,8 +38,9 @@ img {
 }
 .container-alt-links,
 .container-main-activities,
-.container-more-activities,
-.container-footer {
+.container-mail-list,
+.container-footer,
+.conatiner-sugar {
   max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
@@ -80,6 +81,78 @@ a:nth-child(3) .alt-link { background-color: #FFDC00; }
 a:nth-child(4) .alt-link { background-color: #85144B; }
 a:nth-child(5) .alt-link { background-color: #F012BE; }
 a:nth-child(6) .alt-link { background-color: #b10dc9; }
+
+/* Sugar Repos */
+.container-sugar-bg {
+  /* background: url("http://subtlepatterns.com/patterns/purty_wood.png"); */
+  background: url(res/faces.jpg);
+}
+.container-sugar {
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.container-sugar h2 {
+  text-shadow: 2px 2px 2px #DDD;
+}
+.container-sugar  .divider {
+  display: block;
+  margin: 0 auto;
+}
+.sugar-platform-links-container {
+  text-align: center;
+}
+.sugar-palatform-link {
+  display: inline-block;
+  *display: inline;
+
+  padding: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 20px;
+
+  background: rgba(180, 180, 200, 0.6);
+
+  text-decoration: none;
+  color: white;
+}
+.sugar-palatform-link:nth-child(1) {
+  margin-left: 0;
+}
+@-webkit-keyframes link-hover {
+  0%, 100% {
+    -webkit-transform: scale(1);
+  }
+  33% {
+    -webkit-transform: scale(1.1);
+  }
+  44% {
+    -webkit-transform: scale(1.12);
+  }
+  66% {
+    -webkit-transform: scale(0.95);
+  }
+}
+@keyframes link-hover {
+  0%, 100% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.1);
+  }
+  44% {
+    transform: scale(1.12);
+  }
+  66% {
+    transform: scale(0.95);
+  }
+}
+.sugar-palatform-link:hover {
+  -webkit-animation: link-hover 1s infinite;
+          animation: link-hover 1s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
 
 /* Main Activities */
 .container-main-activities-bg {
@@ -144,21 +217,61 @@ a:nth-child(6) .alt-link { background-color: #b10dc9; }
   margin-right: 0px;
 }
 
-/* More Activities
-.container-more-activities-bg {
+/* Mailing list */
+.container-mail-list-bg {
   background-image: url(http://subtlepatterns.com/patterns/congruent_pentagon.png);
 }
-.container-more-activities {
+.container-mail-list {
   padding: 10px;
 }
-.more-search {
+input {
   margin-left:  20px;
   margin-right: 20px;
   padding-left: 10px;
-  width: 100%;
+  width: 70%;
 
+
+  border-radius: 8px;
   font-size: 20px;
-} */
+}
+input:invalid {
+  box-shadow: 2px 2px 2px #FF4136;
+  color: #FF4136;
+}
+.button { /* Thanks http://cssdeck.com/labs/fancy-3d-button */
+	position: relative;
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+  background-color: rgba(219,87,5,1);
+  font-family: Sans, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  display: block;
+  padding: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+  -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+  box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+  margin: 0 auto;
+  margin-bottom: 10px;
+	width: 20%;
+	text-align: center;
+
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+.button:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
 
 /* Footer */
 ul {
